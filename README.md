@@ -6,6 +6,7 @@ Want to learn:
 - knobs that follow mouse movement? or that change to color
 - rainbow mode(random) & color mode(choose color)
 - CSS grid size changeable
+- when to use const versus let
 
 
 TO DO:

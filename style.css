@@ -43,6 +43,7 @@ a {
 #sketch-container {
     height: 457px;
     width: 600px;
+    border: 1px solid var(--burnt-pink);
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
@@ -52,7 +53,7 @@ a {
     border: 1px solid var(--light-burnt-pink);
 }
 
-.grid-item:hover {
+.filled {
     border: 1px solid var(--light-burnt-pink);
     background-color: var(--shadow);
 }
@@ -82,6 +83,7 @@ button {
 
 button:hover {
     cursor: pointer;
+    background-color: var(--light-burnt-pink)
 }
 
 button:active {
