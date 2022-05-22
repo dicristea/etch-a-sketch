@@ -1,19 +1,20 @@
-/* COLORS: */
-#af8d8d
-whitesmoke
-
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+    --dark-burnt-pink: #885656;
+    --burnt-pink: #af8d8d;
+    --bg-color: whitesmoke;
+    --light-burnt-pink: #ddd;
+    --shadow: rgb(49, 49, 49);
+  }
 
 body {
-    font-family: sans-serif;
     margin: 0;
-    padding: 60px 0px 0px 0px;
-    height: 100vh;
+    font-family: sans-serif;
+    font-size: 100%;
     text-align: center;
-    color: #af8d8d;
-    background-color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    flex: auto;
+    color: var(--burnt-pink);
+    background-color: var(--bg-color);
 }
 
 a {
@@ -21,11 +22,78 @@ a {
     color: #af8d8d;
 }
 
+#page-container {
+    position: relative; 
+    /* As it is relative, its child elements can be set with absolute position based on it later. */
+    min-height: 100vh;
+}
 
-footer {
+#content-wrap {
+    padding: 40px 30px 0 30px;
+    display: inline-block;
+    padding-bottom: 2.5rem;
+}
+
+#header {
+    margin-block-start: 1em;
+    margin-block-end: 1.5em;
+    color: var(--dark-burnt-pink);
+}
+
+#sketch-container {
+    height: 457px;
+    width: 600px;
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+    border: 1px solid var(--light-burnt-pink);
+}
+
+.grid-item:hover {
+    border: 1px solid var(--light-burnt-pink);
+    background-color: var(--shadow);
+}
+
+ul {
+    display: flex;
+    padding-inline-start: 0;
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
+}
+
+li {
+    list-style: none;
+    flex-direction: row;
     flex: auto;
-    font-family: sans-serif;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+}
+
+button {
+    color: var(--burnt-pink);
+    font-size: 1em;
+    padding: 7px 14px 7px 14px; 
+    border: 1.5px solid var(--burnt-pink);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    color: var(--dark-burnt-pink);
+    transform: scale(1.05);
+    transition: 0.7ms;
+    /* box-shadow: 10px 10px 10px var(--light-burnt-pink);} */
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
 }
