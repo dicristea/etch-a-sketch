@@ -1,17 +1,8 @@
 # etch-a-sketch
+Sources: 
 
-Want to learn:
-- custom google fonts
-- button pop out effect!
-- knobs that follow mouse movement? or that change to color
-- rainbow mode(random) & color mode(choose color)
-- CSS grid size changeable
-- when to use const versus let
-
-
-TO DO:
-- learn about float/clear; inline-block; flexbox; CSS Grid to make 16x16 div grid
-
+Favicon color
+  <a href="https://www.flaticon.com/free-icons/brush" title="brush icons">Brush icons created by Freepik - Flaticon</a>
 
 
 What I learned:
@@ -23,11 +14,14 @@ What I learned:
   > set footer to absolute position, bottom 0, 100% width, and height
 - :root {} in css to set css variables that can be changed throughout the doc by using a variable
 - font-size
-- CSS Grid
+- CSS Grid - how to set up
 - CSS Variables
 - font-size: absolute and relative size
 - box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
-
+- addEventListeners and functions
+  > grid size, random rainbow & color mode, clear, delete
+  > arrow functions in forEach loop
+- turning HTML collections/Nodelists to Arrays
 
 
 Tips:
@@ -35,3 +29,16 @@ Tips:
 - Always use the proper HTML tags, like <h1> - <h6> for headings and <p> for paragraphs.
 - cursor: pointer; on element
 - body {font-size: 100%;}
+- keep in mind what should be a global vs. local variable
+
+To do in future:
+- add ability to choose custom single color on color button click
+- isn't 'innerHTML' not good practice? Keep trying to find alternate way
+
+Want to learn:
+- custom google fonts X
+- other ways to follow mouse movement?
+- CSS grid 
+- when to use const versus let **
+- toggle-able classes in CSS
+

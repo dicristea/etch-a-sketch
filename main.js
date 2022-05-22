@@ -1,12 +1,30 @@
-// MAKE SKETCH GRID
 const container = document.getElementById("sketch-container");
+const clearButton = document.getElementById("clear");
+const rainbowBtn = document.getElementById('rainbow');
+const colorBtn = document.getElementById('color');
 
-function randomColor() {
-    // return "#" + Math.floor(Math.random()*16777215).toString(16);
-    // this returns fewer colors but they are all nice and bright
-    return `hsl(${Math.random() * 360}, 100%, 50%)`;
+
+// RAINBOW BUTTON
+rainbowBtn.onclick = function randomColor() {
+    let gridItem = document.querySelectorAll(".grid-item");
+    let gridArray = Array.from(gridItem);
+    gridArray.forEach(item => item.addEventListener('mouseenter', function(e) {
+      item.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    }));
 };
 
+// FILL COLOR
+function fillColor() {
+  let gridItem = document.querySelectorAll(".grid-item");
+  let gridArray = Array.from(gridItem);
+  gridArray.forEach(item => item.addEventListener('mouseenter', function(e) {
+    item.style.backgroundColor = '#313131'; // "grid-item filled"
+  }));
+};
+
+colorBtn.addEventListener('click', fillColor);
+
+// MAKE SKETCH GRID
 function makeRows(rows) {
   let cols = rows + 5
   container.style.setProperty('--grid-rows', rows);
@@ -15,24 +33,39 @@ function makeRows(rows) {
     let cell = document.createElement("div");
     container.appendChild(cell).className = "grid-item";
   };
+  fillColor();
 };
 
-makeRows(16);
-
-// COLOR FILL
-let gridItem = document.querySelectorAll(".grid-item");
-let gridArray = Array.from(gridItem);
-
-gridArray.forEach(item => item.addEventListener('mouseenter', function(e) {
-    item.className = "grid-item filled";
-}));
+makeRows(16); // default
 
 
 // CLEAR BUTTON
-let clearButton = document.getElementById("clear");
-
 function clearGrid () {
-    gridArray.forEach(item => item.className = "grid-item");
+  let gridItem = document.querySelectorAll(".grid-item");
+  let gridArray = Array.from(gridItem);
+  gridArray.forEach(item => item.style.backgroundColor = "whitesmoke");
 };
 
 clearButton.addEventListener('click', clearGrid);
+
+
+// REFRESH GRID
+let rowBtns = document.getElementsByClassName('sizing');
+let rowArray = Array.from(rowBtns);
+
+for (let i = 0; i < rowArray.length; i++) {
+  rowArray[i].addEventListener('click', deleteGrid);
+
+function deleteGrid(e) {
+  container.innerHTML="";
+
+  if (e.target.id == 'rows16') {
+    makeRows(16);
+  } else if (e.target.id == 'rows20') {
+    makeRows(20);
+  } else if (e.target.id == 'rows30') {
+    makeRows(30);
+  } else return "Falty";
+ };
+};
+ 
