@@ -25,7 +25,7 @@ What I learned:
 
 
 Tips:
-- body {} automatically has margin:8px, remember to set to 0
+- body {} automatically has margin: 8px, remember to set to 0
 - Always use the proper HTML tags, like <h1>h1</h1> & <h6>h6</h6> for headings and <p>for paragraphs.</p>
 - cursor: pointer; on element
 - body {font-size: 100%;}
@@ -34,10 +34,10 @@ Tips:
 To do in future:
 - add ability to choose custom single color on color button click
 - isn't 'innerHTML' not good practice? Keep trying to find alternate way
+- be able to choose starting place, then click to begin etch-a-sketch
 
 Want to learn:
 - custom google fonts X
-- other ways to follow mouse movement?
 - CSS grid 
 - when to use const versus let **
 - toggle-able classes in CSS
