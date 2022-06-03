@@ -4,6 +4,12 @@ Sources:
 Favicon color
   <a href="https://www.flaticon.com/free-icons/brush" title="brush icons">Brush icons created by Freepik - Flaticon</a>
 
+Want to learn:
+- custom google fonts X
+- different ways to follow mouse
+- CSS grid 
+- when to use const versus let **
+- toggle-able classes in CSS
 
 What I learned:
 - Footer Way 1: Flexbox 
@@ -35,10 +41,4 @@ To do in future:
 - add ability to choose custom single color on color button click
 - isn't 'innerHTML' not good practice? Keep trying to find alternate way
 - be able to choose starting place, then click to begin etch-a-sketch
-
-Want to learn:
-- custom google fonts X
-- CSS grid 
-- when to use const versus let **
-- toggle-able classes in CSS
 
